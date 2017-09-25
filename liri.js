@@ -34,7 +34,7 @@ if(command === 'my-tweets'){
 		if (error) {
 			return console.log('Error occurred: ' + JSON.stringify(error));
 		}
-		for(i=tweets.length-1; i>=0; i--){
+		for(i=19; i>=0; i--){
 			console.log(tweets[i].text, 'Created: '+tweets[i].created_at);
 			console.log('----------------------------------------------');
 			fs.appendFile('log.txt', tweets[i].text+' Created: '+tweets[i].created_at, function(err, data) {
